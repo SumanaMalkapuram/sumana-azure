@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .w3-container
+    if loggedIn
+      h4 You are logged in!
+
+      a(href="/user/external" ).w3-bar-item.w3-button External
+      a(href="/user/internal" ).w3-bar-item.w3-button Internal
+
+    else
+      h4 You are not logged in! Please #[a(href="/login") Log In] to continue.
